@@ -4,6 +4,7 @@ using System.Text;
 using System.ComponentModel;
 using System.Windows.Input;
 using wpf_memo.Commands;
+using wpf_memo.Models;
 
 namespace wpf_memo.ViewModels
 {
@@ -13,19 +14,28 @@ namespace wpf_memo.ViewModels
      */
     class MainWindowViewModel : INotifyPropertyChanged
     {
-        public int Count
+        /// <summary>
+        /// コンストラクタ
+        /// Modelインスタンス
+        /// </summary>
+        public MainWindowViewModel()
+        {
+            Count = new Count();
+        }
+
+        public int Value
         {
             get
             {
-                return _count;
+                return Count.Val;
             }
 
             set
             {
-                _count = value;
+                Count.Val = value;
                 if(PropertyChanged != null)
                 {
-                    PropertyChanged(this, new PropertyChangedEventArgs("Count"));
+                    PropertyChanged(this, new PropertyChangedEventArgs("Value"));
                 }
             }
 
@@ -44,7 +54,8 @@ namespace wpf_memo.ViewModels
             }
         }
 
-        private int _count;
+        // private int _count;
+        public Count Count { get; set; }
 
         private ICommand _pushButtonCommnad;
 

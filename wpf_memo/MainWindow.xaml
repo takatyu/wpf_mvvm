@@ -8,7 +8,7 @@
         <vm:MainWindowViewModel />
     </Window.DataContext>
     <Grid>
-        <Button Command="{Binding PushButtonCommand}"  Content="これを押すと下の数字が1増える" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="170"/>
-        <TextBox HorizontalAlignment="Left" Margin="10,34,0,0" TextWrapping="Wrap" Text="{Binding Count}" Width="120" Height="23" VerticalAlignment="Top"/>
+        <Button Command="{Binding PushButtonCommand}"  Content="カウントダウン" HorizontalAlignment="Left" Margin="145,36,0,0" VerticalAlignment="Top" Width="129"/>
+        <TextBox HorizontalAlignment="Left" Margin="10,34,0,0" TextWrapping="Wrap" Text="{Binding Value}" Width="120" Height="23" VerticalAlignment="Top"/>
     </Grid>
 </Window>

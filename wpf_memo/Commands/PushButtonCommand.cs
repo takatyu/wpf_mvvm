@@ -26,7 +26,7 @@ namespace wpf_memo.Commands
 
         public void Execute(object parameter)
         {
-            _viewModel.Count++;
+            _viewModel.Value++;
             // throw new NotImplementedException();
         }
     }
