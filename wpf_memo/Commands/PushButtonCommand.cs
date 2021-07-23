@@ -13,9 +13,7 @@ namespace wpf_memo.Commands
             _viewModel = viewModel;
         }
 
-        /*
-         * 継承の実装
-         * */
+        
         public event EventHandler CanExecuteChanged;
 
         public bool CanExecute(object parameter)
